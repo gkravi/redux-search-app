@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Redux Vanilla App</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta
+      name="description"
+      content="This is an example of a meta description."
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="theme.css" />
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container px-4">
+      <div class="header container px-4 gy-5">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link disabled"
+                    href="#"
+                    tabindex="-1"
+                    aria-disabled="true"
+                    >Disabled</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="content container px-4">
+        <div class="search_box row p-3">
+          <div class="container h-100">
+            <div class="d-flex justify-content-center h-100">
+              <div class="searchbar">
+                <input
+                  class="search_input"
+                  type="text"
+                  name=""
+                  placeholder="Search..."
+                />
+                <a href="#" class="search_icon"
+                  ><i class="fas fa-search"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row gx-5 gy-5">
+          <div class="search_facet p-3 col-md-4">
+            <div class="clear-filter">
+              <a class="link">Clear</a>
+            </div>
+            <div class="filter-options js-filter-options">
+              <div
+                class="filter-option js-filter-option align-items-center d-flex"
+                value=""
+                data-parent="document_type"
+              >
+                <a class="checkbox js-checkbox" href="javascript:void(0)">
+                  <span class="mvp-icon-check"></span>
+                  <span class="sr-only">Select Filter</span>
+                </a>
+                <span class="filter-option__text pl-15 pl-15"
+                  >Press Release</span
+                >
+                <span class="filter-option__result-count ml-auto">680</span>
+              </div>
+              <div
+                class="filter-option js-filter-option align-items-center d-flex"
+                value=""
+                data-parent="document_type"
+              >
+                <a class="checkbox js-checkbox" href="javascript:void(0)">
+                  <span class="mvp-icon-check"></span>
+                  <span class="sr-only">Select Filter</span>
+                </a>
+                <span class="filter-option__text pl-15 pl-15">News</span>
+                <span class="filter-option__result-count ml-auto">319</span>
+              </div>
+              <div
+                class="filter-option js-filter-option align-items-center d-flex"
+                value=""
+                data-parent="document_type"
+              >
+                <a class="checkbox js-checkbox" href="javascript:void(0)">
+                  <span class="mvp-icon-check"></span>
+                  <span class="sr-only">Select Filter</span>
+                </a>
+                <span class="filter-option__text pl-15 pl-15"
+                  >Curated News</span
+                >
+                <span class="filter-option__result-count ml-auto">38</span>
+              </div>
+              <div
+                class="filter-option js-filter-option align-items-center d-flex"
+                value=""
+                data-parent="document_type"
+              >
+                <a class="checkbox js-checkbox" href="javascript:void(0)">
+                  <span class="mvp-icon-check"></span>
+                  <span class="sr-only">Select Filter</span>
+                </a>
+                <span class="filter-option__text pl-15 pl-15">Awards News</span>
+                <span class="filter-option__result-count ml-auto">15</span>
+              </div>
+              <div
+                class="filter-option js-filter-option align-items-center d-flex"
+                value=""
+                data-parent="document_type"
+              >
+                <a class="checkbox js-checkbox" href="javascript:void(0)">
+                  <span class="mvp-icon-check"></span>
+                  <span class="sr-only">Select Filter</span>
+                </a>
+                <span class="filter-option__text pl-15 pl-15"
+                  >Quantum News</span
+                >
+                <span class="filter-option__result-count ml-auto">12</span>
+              </div>
+              <div
+                class="filter-option js-filter-option align-items-center d-flex"
+                value=""
+                data-parent="document_type"
+              >
+                <a class="checkbox js-checkbox" href="javascript:void(0)">
+                  <span class="mvp-icon-check"></span>
+                  <span class="sr-only">Select Filter</span>
+                </a>
+                <span class="filter-option__text pl-15 pl-15">General</span>
+                <span class="filter-option__result-count ml-auto">10</span>
+              </div>
+              <div
+                class="filter-option js-filter-option align-items-center d-flex"
+                value=""
+                data-parent="document_type"
+              >
+                <a class="checkbox js-checkbox" href="javascript:void(0)">
+                  <span class="mvp-icon-check"></span>
+                  <span class="sr-only">Select Filter</span>
+                </a>
+                <span class="filter-option__text pl-15 pl-15">HHS News</span>
+                <span class="filter-option__result-count ml-auto">8</span>
+              </div>
+              <div
+                class="filter-option js-filter-option align-items-center d-flex"
+                value=""
+                data-parent="document_type"
+              >
+                <a class="checkbox js-checkbox" href="javascript:void(0)">
+                  <span class="mvp-icon-check"></span>
+                  <span class="sr-only">Select Filter</span>
+                </a>
+                <span class="filter-option__text pl-15 pl-15"
+                  >Success Story</span
+                >
+                <span class="filter-option__result-count ml-auto">7</span>
+              </div>
+              <div
+                class="filter-option js-filter-option align-items-center d-flex"
+                value=""
+                data-parent="document_type"
+              >
+                <a class="checkbox js-checkbox" href="javascript:void(0)">
+                  <span class="mvp-icon-check"></span>
+                  <span class="sr-only">Select Filter</span>
+                </a>
+                <span class="filter-option__text pl-15 pl-15">Perspective</span>
+                <span class="filter-option__result-count ml-auto">4</span>
+              </div>
+              <div
+                class="filter-option js-filter-option align-items-center d-flex"
+                value=""
+                data-parent="document_type"
+              >
+                <a class="checkbox js-checkbox" href="javascript:void(0)">
+                  <span class="mvp-icon-check"></span>
+                  <span class="sr-only">Select Filter</span>
+                </a>
+                <span class="filter-option__text pl-15 pl-15">Support</span>
+                <span class="filter-option__result-count ml-auto">3</span>
+              </div>
+              <div
+                class="filter-option js-filter-option align-items-center d-flex"
+                value=""
+                data-parent="document_type"
+              >
+                <a class="checkbox js-checkbox" href="javascript:void(0)">
+                  <span class="mvp-icon-check"></span>
+                  <span class="sr-only">Select Filter</span>
+                </a>
+                <span class="filter-option__text pl-15 pl-15">Case Study</span>
+                <span class="filter-option__result-count ml-auto">1</span>
+              </div>
+            </div>
+          </div>
+          <div class="search_results p-3 col-md-8">
+            <div class="list-group">
+              <a
+                href="#"
+                class="list-group-item list-group-item-action active"
+                aria-current="true"
+              >
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">List group item heading</h5>
+                  <small>3 days ago</small>
+                </div>
+                <p class="mb-1">Some placeholder content in a paragraph.</p>
+                <small>And some small print.</small>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">List group item heading</h5>
+                  <small class="text-muted">3 days ago</small>
+                </div>
+                <p class="mb-1">Some placeholder content in a paragraph.</p>
+                <small class="text-muted">And some muted small print.</small>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">List group item heading</h5>
+                  <small class="text-muted">3 days ago</small>
+                </div>
+                <p class="mb-1">Some placeholder content in a paragraph.</p>
+                <small class="text-muted">And some muted small print.</small>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer container px-4"></div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.1.0/redux.min.js"
+      integrity="sha512-F21iSaHGX/3NFz5SuwoH6pGhTPxtoJoWWULqQVPQPtLm7nbK5r8vRSSSYy3Aj+H39cVrVm4+3ikGoVD1AjE0sQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/redux-thunk/2.3.0/redux-thunk.min.js"
+      integrity="sha512-RP+ONt3lqUkczc2mR9uytsHFpInjOtbFgL0Xtoe5NWdLT+X/vArGKAPU4QGYCeYZMEuAvsutTA3pNfoeP3vyaQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Include Handlebars from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="search_utils.js"></script>
+    <script src="search.js"></script>
+    <script src="search_results_reducer.js"></script>
+    <script src="search_facet_reducer.js"></script>
+    <script src="search_box_reducer.js"></script>
+    <script src="search_results_action.js"></script>
+    <script src="search_facet_action.js"></script>
+    <script src="search_box_action.js"></script>
+    <script src="search_reducers.js"></script>
+    <script src="search_state.js"></script>
+    <script src="search_box.js"></script>
+    <script src="search_facet.js"></script>
+  </body>
+</html>
